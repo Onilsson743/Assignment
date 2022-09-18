@@ -523,7 +523,89 @@ html, body {
         padding: 2rem 0; 
     }
 
+/* Flash sale section */
+
 .flash-sale {
+    background-color: var(--color-theme-dark);
+}
+    .flash-sale .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flash-sale .container .left-side {
+        width: 100%;
+    }
+        .flash-sale .container .flash-sale-box {
+            background-color: var(--color-theme);
+            color: white;
+            width: 100%;
+            text-align: center;
+            border-radius: var(--border-radius-medium);
+            padding-top: 2rem;
+        }
+            .flash-sale .container .flash-sale-box h1 {
+                font-weight: var(--font-weight-bold);
+                font-size: 3.8rem;
+                line-height: 55px;
+            }
+            .flash-sale .container .flash-sale-box .flash-sale-box p {
+                font-size: 1.6rem;
+                margin-top: 0.8rem;
+                font-weight: var(--font-weight-bold);
+            }
+        .flash-sale .container .right-side {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        .flash-sale .container .right-side .btn-theme {
+            width: 200px;
+            margin-bottom: 2rem;
+        }
+        .flash-sale .container .right-side .timer-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            gap: 0.6rem;
+            margin: 2rem 0;
+        }
+            .flash-sale .container .right-side .timer-box .counter-box {
+                background-color: white;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                text-align: center;
+                position: relative;
+            }
+            .flash-sale .container .right-side .timer-box .counter-box::before {
+                content: '';
+                position: absolute;
+                height: 88px;
+                width: 88px;
+                border-radius: 50%;
+                left: -4px;
+                top: -4px;
+                border: 4px dashed var(--color-theme);
+                animation: circle 30s linear infinite;
+            }
+                @keyframes circle {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                .flash-sale .container .right-side .timer-box .counter-box h1 {
+                    margin-top: 1.5rem;
+                    line-height: 40%;
+                }
+
+/* .flash-sale {
     background-color: var(--color-theme-dark);
     height: 435px;
 }
@@ -560,7 +642,7 @@ html, body {
 
         .flash-sale .container .right-side {
             flex: 1;
-            /* height: 100%; */
+            
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -616,32 +698,63 @@ html, body {
                 .flash-sale .container .right-side .btn-theme:hover {
                     background-color: var(--color-theme);
                     color: white;
-                }
+                } */
 
 /* Top sellers section */
-
 .top-sellers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 350px 350px;
-    gap: 1rem;
-    margin-bottom: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    margin-bottom: 5rem;
+    
 }
-    #TopSeller-box-1 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;        
-    }
-    #TopSeller-box-2 {
-        grid-column: 2 / -1;
-        grid-row: 1 / 2;
-    }
-    #TopSeller-box-3 {
-        grid-column: 2 / -1;
-        grid-row: 2 / -1;
-    }
+
 
 /* Subscribe section */
+
 .subscribe-section {
+    background-color: var(--color-gray-3);
+    height: 300px;
+}
+.subscribe-section .container {
+    height: 100%;
+}   
+    .subscribe-section .container .subscribe-area {
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+        .subscribe-section .container .subscribe-area h1 {
+            font-family: var(--font-play);
+            font-weight: var(--font-weight-bold);
+        }
+            .subscribe-section .container .subscribe-area h1 span {
+                color: var(--color-theme);
+            }
+        .subscribe-section .container .subscribe-area .subscribe-form {
+            position: relative;
+            width: 80%;            
+        }
+            .subscribe-section .container .subscribe-area .subscribe-form input {
+                padding: 10px;
+                border: 1px solid var(--color-gray-2);
+                border-radius: var(--border-radius-medium);
+                width: 100%;
+                
+            }
+            .subscribe-section .container .subscribe-area .subscribe-form .btn-theme{
+                position: absolute;
+                padding: 8px 15px;
+                right: 5px;
+                top: 3px;
+            }
+
+/* .subscribe-section {
     background-color: var(--color-gray-3);
     height: 313px;
 }
@@ -690,8 +803,8 @@ html, body {
         .subscribe-section .container .grey-box {
             flex: 1;
             height: 100%;
-            background-color: var(--color-gray-1);
-        }
+            background-color: var(--color-gray-1); */
+        /* } */
 
 
 /* Footer */
@@ -796,27 +909,34 @@ footer {
         flex-direction: column;
         max-width: 1700px;   
     }
-    .information-boxes .first-containers {
-        display: flex;
-        flex: 1;
-    }
-    .information-boxes .second-containers {
-        display: flex;
-        flex: 1;
-    }
-    .information-boxes .info-box {
-        margin: 1rem;
-        flex: 1;
-    }
+        .information-boxes .first-containers {
+            display: flex;
+            flex: 1;
+        }
+        .information-boxes .second-containers {
+            display: flex;
+            flex: 1;
+        }
+        .information-boxes .info-box {
+            margin: 1rem;
+            flex: 1;
+        }
 
-    /* New arrival section */
+    /* Cards sections */
     .new-arrivals {
         justify-content: space-between;
     }
-        .new-arrivals .card-box {
+    .top-sellers {
+        justify-content: space-between;
+    }
+        .container .card-box {
             width: 49%;
         }
-
+    
+    /* Flash sale section */
+    .flash-sale .container .left-side {
+        width: 70%;
+    }
     
     
 }
@@ -877,6 +997,50 @@ footer {
         flex: 8;
     }
     
+    /* Flash sale section */
+    .flash-sale .container {
+        flex-direction: row;
+        height: 315px;
+    }
+        .flash-sale .container .left-side {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+            .flash-sale .container .left-side .flash-sale-box {
+                position: absolute;
+                border-radius: 0;
+                width: 280px;
+                top: 0;
+            }
+        .flash-sale .container .right-side .timer-box {
+            gap: 2rem;
+        }
+            .flash-sale .container .right-side .timer-box .counter-box {
+                height: 110px;
+                width: 110px;
+            }
+                .flash-sale .container .right-side .timer-box .counter-box::before {
+                    height: 118px;
+                    width: 118px;
+                }
+    /* Subscribe section */
+    .subscribe-section .container {
+        display: flex;
+        flex-direction: row;
+    }
+        .subscribe-section .container .grey-box {
+            flex: 1;
+            height: 100%;
+            background-color: var(--color-gray-1);
+        }
+        .subscribe-section .container .subscribe-area {
+            align-items: start;
+        }
+            .subscribe-section .container .subscribe-area p {
+                width: 70%;
+                text-align: start;
+            }
 }
 
 @media (min-width: 1400px) {
@@ -925,7 +1089,29 @@ footer {
         grid-row: 3 / -1;
     }
 
-    
+    /* Top sellers section */
+    .top-sellers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 350px 350px;
+        gap: 1rem;
+        margin-bottom: 8rem;
+    }
+        .top-sellers .card-box {
+            width: 100%;
+        }
+        #TopSeller-box-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;        
+        }
+        #TopSeller-box-2 {
+            grid-column: 2 / -1;
+            grid-row: 1 / 2;
+        }
+        #TopSeller-box-3 {
+            grid-column: 2 / -1;
+            grid-row: 2 / -1;
+        }
     
 
 }
