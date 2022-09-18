@@ -45,13 +45,17 @@ html, body {
 
 .btn-theme {
     background-color: var(--color-theme);
-    border-radius: var(--border-radius-medium);
+    border-radius: 30px;
     padding: 0.7rem;
     border: none;
     color: var(--color-white);
     font-weight: var(--font-weight-medium);
+    transition: 0.3s ease-in-out;
 
 }
+    .btn-theme:hover {
+        scale: 1.1;
+    }
 
 /* Top menu */
 
@@ -503,15 +507,11 @@ html, body {
         .discount-section .container .discount-info strong {
             margin-left: 5px;
         }
-    .discount-section button {  
+    .discount-section .btn-theme {  
         font-size: var(--font-size-18pt);
         color: var(--color-theme);
         background-color: var(--color-white);
-        border-radius: 30px;
-        padding: 0.7rem 2rem;
-        border: none;   
-        font-weight: var(--font-weight-medium);
-        transition: 0.3s;
+        padding: 0.7rem 2rem; 
     }
         .discount-section button:hover {
             background-color: var(--color-theme-dark);
@@ -607,15 +607,13 @@ html, body {
                         line-height: 40%;
                         color: var(--color-theme);
                     }
-            .flash-sale .container .right-side button {
+            .flash-sale .container .right-side .btn-theme {
                 align-self: center;
                 color: var(--color-theme);
                 background-color: var(--color-white);
                 width: 150px;
-                transition: 0.3s ease-in-out;
             }
-                .flash-sale .container .right-side button:hover {
-                    transform: scale(1.2);
+                .flash-sale .container .right-side .btn-theme:hover {
                     background-color: var(--color-theme);
                     color: white;
                 }
@@ -683,9 +681,11 @@ html, body {
                     right: 4px;
                     top: 3px;
                     padding: 8px 15px;
+                    transition: 0.3s ease-in-out;
                 }
-
-
+                    .subscribe-section .container .subscribe-area .subscribe-form .btn-theme:hover {
+                        background-color: var(--color-theme-dark);
+                    }
 
         .subscribe-section .container .grey-box {
             flex: 1;
