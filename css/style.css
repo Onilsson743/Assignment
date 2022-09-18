@@ -542,7 +542,7 @@ html, body {
             width: 100%;
             text-align: center;
             border-radius: var(--border-radius-medium);
-            padding-top: 2rem;
+            padding: 2rem 0 1rem 0;
         }
             .flash-sale .container .flash-sale-box h1 {
                 font-weight: var(--font-weight-bold);
@@ -553,6 +553,7 @@ html, body {
                 font-size: 1.6rem;
                 margin-top: 0.8rem;
                 font-weight: var(--font-weight-bold);
+                
             }
         .flash-sale .container .right-side {
             width: 100%;
@@ -1129,8 +1130,10 @@ footer {
 
 
 
+/* Login / signin site */
 
 
+/* Site title */
 .site-title {
     background-color: var(--color-theme-light-dark);
 }
@@ -1161,10 +1164,11 @@ footer {
         }
 
 
-
+/* Login / Registration section */
 
 .signin-register .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
     margin-top: 7rem;
@@ -1178,6 +1182,7 @@ footer {
         flex-direction: column;
         gap: 1.5rem;
         padding: 2rem;
+        width: 100%;
     }
         
         .signin-register .container .window label span {
@@ -1292,8 +1297,8 @@ footer {
     }
     .signin-register .container .window .external-login button:hover {
         background-color: var(--color-theme-dark);
+        scale: 1.05;
     }
-
 
         .signin-register .container .window .external-login p{
             margin: 0;
@@ -1305,7 +1310,6 @@ footer {
             left: 10px;
             top: 5px;
         }
-
         .signin-register .container .window .external-login .facebook-img {
             filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(281deg) brightness(108%) contrast(108%);
             width: 10%;
@@ -1315,31 +1319,8 @@ footer {
         }
 
 
-
-/* @keyframes slideleft {
-    0% {
-        opacity: 0;
-        transform: translateX(-500px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
+@media (min-width: 992px) {
+    .signin-register .container {
+        flex-direction: row;
     }
 }
-
-.test {
-    font-size: 60px;
-    animation: slideleft;
-    animation-duration: 3s;
-} */
-
-
-
-
-
-/* Serchbar */
-
-/* .main-menu .input-group .button-theme {
-    background-color: var(--color-theme);
-    
-} */
