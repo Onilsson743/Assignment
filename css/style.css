@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 :root {
     --color-theme: #20D3C2;
     --color-theme-light: #EEFCFB;
@@ -15,8 +15,8 @@
     --color-product-instock: #82D8C6;
     --color-product-outofstock: #FE6C6C;
 
-    --font-play: 'play', sans-serif;
-    --font-roboto: 'roboto', sans-serif;
+    --font-play: 'Play', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
     --font-weight-regual: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
@@ -377,7 +377,7 @@ html, body {
     margin-bottom: 5rem;
     
 }
-    .new-arrivals .arrival-box {
+    .container .card-box {
         background-color: var(--color-gray-3);
         border-radius: var(--border-radius-small);
         overflow: hidden;
@@ -385,21 +385,21 @@ html, body {
         
         
     }
-        .new-arrivals .arrival-box img {
+        .container .card-box img {
             width: 100%;
         }
-        .new-arrivals .arrival-box .card-background {
+        .container .card-box .card-background {
             background-color: var(--color-theme-dark);
             opacity: 88%;
             position: absolute;
-            top: 90%;
-            height: 100%;
+            bottom: 0px;
+            height: 50px;
             width: 100%;
             z-index: 1;
             transition: 0.3s ease-in-out;
         }
        
-        .new-arrivals .arrival-box .card-menu {
+        .container .card-box .card-menu {
             position: absolute;
             border-radius: 30px;
             background-color: var(--color-white);
@@ -411,42 +411,40 @@ html, body {
             font-size: 1.4rem;
             transition: 0.3s ease-in-out;
         }
-            .new-arrivals .arrival-box .card-menu .fa-circle {
+            .container .card-box .card-menu .fa-circle {
                 color: var(--color-product-instock);
             }
-            .new-arrivals .arrival-box .card-menu a {
+            .container .card-box .card-menu a {
                 color: var(--color-theme-dark);
             }
-            .new-arrivals .arrival-box .card-menu a:hover {
+            .container .card-box .card-menu a:hover {
                 color: var(--color-theme);
             }
-        .new-arrivals .arrival-box .card-info {
+        .container .card-box .card-info {
             color: var(--color-white);
             width: 100%;
-            
             position: absolute;
             z-index: 2;
-            top: 89%;
+            bottom: -125px;
             padding: 1rem;
             transition: 0.3s;
         }
-            .new-arrivals .arrival-box .card-info button {
+            .container .card-box .card-info button {
                 background: none;
                 color: var(--color-white);
                 border: 1px solid white;
                 margin: 0.5rem 0;
             }
 
-            .new-arrivals .arrival-box .card-info p {
+            .container .card-box .card-info p {
                 text-decoration: line-through;
             }
-            .new-arrivals .arrival-box .card-info strong {
+            .container .card-box .card-info strong {
                 color: var(--color-theme);
                 font-size: 1.25rem;
             }
             .star-box {
                 direction: rtl;
-                
             }
                 .box i{
                     font-size: 40px;
@@ -454,40 +452,33 @@ html, body {
                     transition: 0.3s ease-in-out;
                 }
                     .star-box i:hover {
-                        color: var(--color-theme);
-                        
+                        color: var(--color-theme);                        
                     }
-            
                     .star-box .s1:hover ~ i {
-                        color: var(--color-theme);
-                        
+                        color: var(--color-theme);                        
                     }
                     .s2:hover ~ i {
-                        color: var(--color-theme);
-                        
+                        color: var(--color-theme);                        
                     }
                     .s3:hover ~ i {
-                        color: var(--color-theme);
-                        
+                        color: var(--color-theme);                        
                     }
                     .s4:hover ~ i {
-                        color: var(--color-theme);
-                        
+                        color: var(--color-theme);                        
                     }
                     .s5:hover ~ i {
-                        color: var(--color-theme);
-                        
+                        color: var(--color-theme);                        
                     }
 
 
-        .new-arrivals .arrival-box:hover .card-menu {
+        .container .card-box:hover .card-menu {
             top: 5%;
         }
-        .new-arrivals .arrival-box:hover .card-background {
-            top: 0%;
+        .container .card-box:hover .card-background {
+            height: 100%;
         }
-        .new-arrivals .arrival-box:hover .card-info {
-            top: 50%;
+        .container .card-box:hover .card-info {
+            bottom: 0;
         }
             
         
@@ -510,20 +501,14 @@ html, body {
         
     }
         .discount-section .container .discount-info strong {
-            /* font-size: var(--font-size-36pt); */
-            /* margin-top: 32px; */
             margin-left: 5px;
-            
         }
-    .discount-section button {
-        /* display: block; */
+    .discount-section button {  
         font-size: var(--font-size-18pt);
         color: var(--color-theme);
         background-color: var(--color-white);
         border-radius: 30px;
         padding: 0.7rem 2rem;
-        
-        /* margin-top: 1rem;    */
         border: none;   
         font-weight: var(--font-weight-medium);
         transition: 0.3s;
@@ -635,12 +620,84 @@ html, body {
                     color: white;
                 }
 
+/* Top sellers section */
+
+.top-sellers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 350px 350px;
+    gap: 1rem;
+    margin-bottom: 8rem;
+}
+    #TopSeller-box-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;        
+    }
+    #TopSeller-box-2 {
+        grid-column: 2 / -1;
+        grid-row: 1 / 2;
+    }
+    #TopSeller-box-3 {
+        grid-column: 2 / -1;
+        grid-row: 2 / -1;
+    }
+
+/* Subscribe section */
+.subscribe-section {
+    background-color: var(--color-gray-3);
+    height: 313px;
+}
+    .subscribe-section .container {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+        .subscribe-section .container .subscribe-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+            .subscribe-section .container .subscribe-area h1 {
+                font-family: var(--font-play);
+                font-weight: var(--font-weight-bold);
+            }
+            .subscribe-section .container .subscribe-area span {
+                color: var(--color-theme);
+            }
+            .subscribe-section .container .subscribe-area p {
+                width: 70%;
+            }
+            .subscribe-section .container .subscribe-area .subscribe-form {
+                position: relative;
+                width: 75%;
+            }
+                .subscribe-section .container .subscribe-area .subscribe-form input {
+                    width: 100%;
+                    border-radius: var(--border-radius-medium);
+                    padding: 10px;
+                    border: 1px solid var(--color-gray-2);
+                }
+                .subscribe-section .container .subscribe-area .subscribe-form .btn-theme {
+                    position: absolute;
+                    right: 4px;
+                    top: 3px;
+                    padding: 8px 15px;
+                }
+
+
+
+        .subscribe-section .container .grey-box {
+            flex: 1;
+            height: 100%;
+            background-color: var(--color-gray-1);
+        }
 
 
 /* Footer */
 
 footer {
-    background-color: var(--color-theme-dark);
+    background-color: var(--color-dark);
     color: var(--color-white);
     padding-bottom: 0.5rem;
     padding-top: 1.3rem;
@@ -756,7 +813,7 @@ footer {
     .new-arrivals {
         justify-content: space-between;
     }
-        .new-arrivals .arrival-box {
+        .new-arrivals .card-box {
             width: 49%;
         }
 
@@ -767,7 +824,7 @@ footer {
 @media (min-width: 992px) {
 
     /* New arrival section */
-    .new-arrivals .arrival-box {
+    .new-arrivals .card-box {
         width: 32%;
     }
 
