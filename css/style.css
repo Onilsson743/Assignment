@@ -1172,6 +1172,7 @@ footer {
     justify-content: space-between;
     gap: 1rem;
     margin-top: 7rem;
+    margin-bottom: 7rem;
     align-items: start;
 }
     .signin-register .container .window {
