@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
 :root {
     --color-theme: #20D3C2;
     --color-theme-light: #EEFCFB;
@@ -27,7 +27,6 @@
     --font-size-36pt: 3rem;
     --font-size-60pt: 5rem;
     
-
     --border-radius-small: 8px;
     --border-radius-medium: 25px;
     --border-radius-rounded: 50%;
@@ -40,9 +39,7 @@ html, body {
     font-family: var(--font-roboto);
     font-weight: var(--font-weight-regual);
     color: var(--color-theme-dark);
-
 }
-
 .btn-theme {
     background-color: var(--color-theme);
     border-radius: 30px;
@@ -51,15 +48,12 @@ html, body {
     color: var(--color-white);
     font-weight: var(--font-weight-medium);
     transition: 0.3s ease-in-out;
-
 }
     .btn-theme:hover {
         scale: 1.1;
     }
 
 /* Top menu */
-
-/* General */
 .top-menu{
     background-color: var(--color-theme);
     color: var(--color-white);   
@@ -68,13 +62,12 @@ html, body {
         display: flex;
     }
 
-    .top-menu > .container {
+    .top-menu .container {
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0;
-        
+        padding: 0;  
     }
 
     /* Left side */
@@ -83,12 +76,10 @@ html, body {
         color: var(--color-white);
         border: none;
     }
-
         .top-menu .dropdown-theme button:hover {
         color: var(--color-theme-dark);
         border: none;
         }
-
     .top-menu .dropdown-menu {
         background-color: var(--color-theme);
     }
@@ -96,13 +87,11 @@ html, body {
         border: none;
     }
 
-    
 
     /* Right side */
     .top-menu .right-side {
         display: flex;
     }
-
     .top-menu a{
         color: var(--color-white);
         text-decoration: none;
@@ -117,7 +106,6 @@ html, body {
         
 
     /* Hidden mobile menus */
-    
     .top-menu .social-media {
         display: none;        
     }
@@ -125,12 +113,9 @@ html, body {
     .top-menu .top-menu-links {
         display: none;
     }
-    /* End */
-
 
 
 /* Main menu */
-
 .main-menu .container {
     display: flex;
     flex-direction: column;
@@ -143,8 +128,7 @@ html, body {
     .main-menu .container .serch-bar {
         position: relative;
         flex: 1;
-        margin-left: 3rem;
-        
+        margin-left: 3rem; 
     }
         .main-menu .container .serch-bar input {
             width: 100%;
@@ -178,13 +162,11 @@ html, body {
                 background-color: var(--color-theme-dark);
             }
 
-
     /* Hidden mobile content */
     .main-menu .container .menu-links {
         display: none;
     }
     
-
 
 /* Main menu bottom */
 
@@ -227,7 +209,6 @@ html, body {
         }
 
 
-
 /* Banner section */
 .showcase {
     background-color: var(--color-gray-3);
@@ -244,14 +225,12 @@ html, body {
         }
         .showcase .container h1{
             font-size: 3.7em;
-            font-family: var(--font-play);
-            
+            font-family: var(--font-play);           
         }
             .showcase .container strong {
                 color: var(--color-theme);
                 font-size: 3.7rem;
             }
-
             .showcase .container button {
                 background-color: var(--color-white);
                 color: var(--color-white);
@@ -259,7 +238,6 @@ html, body {
                 margin-bottom: 1.2rem;
                 margin-right: 20%;
                 margin-left: 20%;
-
             }
                 .showcase .container button:hover {
                     background-color: var(--color-theme-dark);
@@ -278,10 +256,8 @@ html, body {
 
 
 /* Information section */
-
 .information-boxes {
-    margin-top: 4rem;
-    
+    margin-top: 4rem; 
 }
 
 .information-boxes .info-box {
@@ -307,21 +283,15 @@ html, body {
     .information-boxes .info-box:hover {
         background-color: var(--color-theme);
         color: var(--color-white);
-        
     }
     .information-boxes .info-box:hover img {
-        filter: brightness(1000%);
-        
+        filter: brightness(1000%); 
     }
     .information-boxes .info-box:hover h6 {
         color: var(--color-white);
-        
     }
 
-
-
 /* Titles */
-
 .title {
     text-align: center;
     margin-bottom: 3rem;
@@ -341,13 +311,11 @@ html, body {
 
 
 /* Categories section */
-
 .categories {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    gap: 1rem;
-    
+    gap: 1rem;   
 }
 .categories .category-box {
     background-color: var(--color-gray-1);
@@ -382,30 +350,24 @@ html, body {
             color: var(--color-white);
             font-size: 0.9rem;
         }
-
-        .categories .category-box:hover .category-title {
-            height: 60px;
-            
+         .categories .category-box:hover .category-title {
+            height: 60px;  
         }
 
 
 /* New arrivals section */
-
 .new-arrivals {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     row-gap: 1rem;
     margin-bottom: 5rem;
-    
 }
     .container .card-box {
         background-color: var(--color-gray-3);
         border-radius: var(--border-radius-small);
         overflow: hidden;
         position: relative;
-        
-        
     }
         .container .card-box img {
             width: 100%;
@@ -420,7 +382,6 @@ html, body {
             z-index: 1;
             transition: 0.3s ease-in-out;
         }
-       
         .container .card-box .card-menu {
             position: absolute;
             border-radius: 30px;
@@ -457,7 +418,6 @@ html, body {
                 border: 1px solid white;
                 margin: 0.5rem 0;
             }
-
             .container .card-box .card-info p {
                 text-decoration: line-through;
             }
@@ -491,8 +451,6 @@ html, body {
                     .s5:hover ~ i {
                         color: var(--color-theme);                        
                     }
-
-
         .container .card-box:hover .card-menu {
             top: 5%;
         }
@@ -503,9 +461,6 @@ html, body {
             bottom: 0;
         }
             
-        
-
-
 /* New customer discount section */
 .discount-section {
     background-color: var(--color-gray-2);
@@ -519,8 +474,6 @@ html, body {
     }
     .discount-section .container .discount-info h1 {
         font-size: var(--font-size-60pt);
-        
-        
     }
         .discount-section .container .discount-info strong {
             margin-left: 5px;
@@ -542,7 +495,6 @@ html, body {
     }
 
 /* Flash sale section */
-
 .flash-sale {
     background-color: var(--color-theme-dark);
 }
@@ -628,101 +580,6 @@ html, body {
                     line-height: 30%;
                 }
 
-/* .flash-sale {
-    background-color: var(--color-theme-dark);
-    height: 435px;
-}
-    .flash-sale .container {
-        display: flex;
-        height: 100%;
-    }
-        .flash-sale .container .left-side {
-            position: relative;
-            flex: 1;
-        }
-            .flash-sale .container .left-side .flash-sale-box {
-                background-color: var(--color-theme);
-                color: white;
-                position: absolute;
-                height: 265px;
-                width: 255px;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-            }
-                .flash-sale .container .left-side .flash-sale-box h1 {
-                    font-weight: var(--font-weight-bold);
-                    font-size: 3.8rem;
-                    line-height: 55px;
-                }
-                .flash-sale .container .left-side .flash-sale-box p {
-                    font-size: 1.6rem;
-                    margin-top: 0.8rem;
-                    font-weight: var(--font-weight-bold);
-                }
-
-        .flash-sale .container .right-side {
-            flex: 1;
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: start;
-        }
-            .flash-sale .container .right-side .timer-box {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 2rem;
-
-            }
-                .flash-sale .container .right-side .timer-box .counter-box {
-                    background-color: white;
-                    border-radius: 50%;
-                    text-align: center;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    height: 110px;
-                    width: 110px;
-                    
-                    position: relative;
-                }
-                .flash-sale .container .right-side .timer-box .counter-box::before {
-                    content: '';
-                    position: absolute;
-                    height: 118px;
-                    width: 118px;
-                    border-radius: 50%;
-                    left: -4px;
-                    border: 4px dashed var(--color-theme);
-                    animation: circle 40s linear infinite;
-                }
-                    @keyframes circle {
-                        0% {
-                            transform: rotate(0deg);
-                        }
-                        100% {
-                            transform: rotate(360deg);
-                        }
-                    }
-                    .flash-sale .container .right-side .timer-box .counter-box h1{
-                        margin-top: 2rem;
-                        line-height: 40%;
-                        color: var(--color-theme);
-                    }
-            .flash-sale .container .right-side .btn-theme {
-                align-self: center;
-                color: var(--color-theme);
-                background-color: var(--color-white);
-                width: 150px;
-            }
-                .flash-sale .container .right-side .btn-theme:hover {
-                    background-color: var(--color-theme);
-                    color: white;
-                } */
-
 /* Top sellers section */
 .top-sellers {
     display: flex;
@@ -735,7 +592,6 @@ html, body {
 
 
 /* Subscribe section */
-
 .subscribe-section {
     background-color: var(--color-gray-3);
     height: 300px;
@@ -777,61 +633,7 @@ html, body {
                 top: 3px;
             }
 
-/* .subscribe-section {
-    background-color: var(--color-gray-3);
-    height: 313px;
-}
-    .subscribe-section .container {
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-    }
-        .subscribe-section .container .subscribe-area {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-            .subscribe-section .container .subscribe-area h1 {
-                font-family: var(--font-play);
-                font-weight: var(--font-weight-bold);
-            }
-            .subscribe-section .container .subscribe-area span {
-                color: var(--color-theme);
-            }
-            .subscribe-section .container .subscribe-area p {
-                width: 70%;
-            }
-            .subscribe-section .container .subscribe-area .subscribe-form {
-                position: relative;
-                width: 75%;
-            }
-                .subscribe-section .container .subscribe-area .subscribe-form input {
-                    width: 100%;
-                    border-radius: var(--border-radius-medium);
-                    padding: 10px;
-                    border: 1px solid var(--color-gray-2);
-                }
-                .subscribe-section .container .subscribe-area .subscribe-form .btn-theme {
-                    position: absolute;
-                    right: 4px;
-                    top: 3px;
-                    padding: 8px 15px;
-                    transition: 0.3s ease-in-out;
-                }
-                    .subscribe-section .container .subscribe-area .subscribe-form .btn-theme:hover {
-                        background-color: var(--color-theme-dark);
-                    }
-
-        .subscribe-section .container .grey-box {
-            flex: 1;
-            height: 100%;
-            background-color: var(--color-gray-1); */
-        /* } */
-
-
 /* Footer */
-
 footer {
     background-color: var(--color-dark);
     color: var(--color-white);
@@ -972,7 +774,6 @@ footer {
     }
 
     /* New customer discount section */
-
     .discount-section .container {
         display: flex;
         justify-content: space-between;
@@ -1051,6 +852,7 @@ footer {
                 margin-top: 2rem;
                 line-height: 60%;
             }
+
     /* Subscribe section */
     .subscribe-section .container {
         display: flex;
@@ -1073,7 +875,6 @@ footer {
 @media (min-width: 1400px) {
 
     /* Category section */
-
     .categories {
         display: grid;
         gap: 0.5rem;
@@ -1177,7 +978,6 @@ footer {
 
 
 /* Login / Registration section */
-
 .signin-register .container {
     display: flex;
     flex-direction: column;
