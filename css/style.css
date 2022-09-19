@@ -1222,6 +1222,7 @@ footer {
         .signin-register .container .window .additional-options a {
             color: var(--color-theme);
             text-decoration: none;
+            margin-top: 0.2rem;
             transition: 0.2s ease-in-out;
         }
             .signin-register .container .window .additional-options a:hover {
@@ -1266,7 +1267,7 @@ footer {
         }
         .signin-register .container .window .external-login-title span {
             border-bottom: 1px solid var(--color-gray-0);
-            width: 30%;
+            width: 20%;
             margin: auto;
         }
     .signin-register .container .window .external-login {
@@ -1306,14 +1307,14 @@ footer {
             align-self: center;
         }
         .signin-register .container .window .external-login .google-img {
-            width: 11%;
+            width: 30px;
             position: absolute;
             left: 10px;
             top: 5px;
         }
         .signin-register .container .window .external-login .facebook-img {
             filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(281deg) brightness(108%) contrast(108%);
-            width: 10%;
+            width: 27px;
             position: absolute;
             left: 10px;
             top: 5px;
@@ -1324,4 +1325,7 @@ footer {
     .signin-register .container {
         flex-direction: row;
     }
+        .signin-register .container .window .external-login-title span {
+            width: 30%;
+        }
 }
