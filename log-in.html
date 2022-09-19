@@ -86,15 +86,18 @@
         <!-- Main menu -->
         <div class="main-menu">
             <div class="container">
+                <!-- Logo -->
                 <div class="brand">
                     <a href="index.html"><img src="images/logo.svg" alt=""></a>
                 </div>
 
-                <div class="input-group serch-border">
-                    <input type="text" class="form-control" placeholder="Serch product..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary button-theme" type="button"><img src="images/search-icon.svg"></button>
-                </div>
+                <!-- Serch bar -->
+                <form class="serch-bar">
+                    <input type="text" placeholder="Serch Products...">
+                    <button class="serch-button"><i class="fa-regular fa-magnifying-glass"></i></button>
+                </form>
 
+                <!-- Links -->
                 <div class="menu-links">
                     <a class="menu-link" href=""><i class="fa-regular fa-user me-2"></i>My account</a> 
                     <a class="menu-link" href=""><i class="fa-regular fa-heart"></i></a>  
@@ -157,15 +160,16 @@
 
                 <form id="signinform" >
                     <div class="mb-3">
-                        <label for="signinEmail">Email<span class="required">*</span></label>
-                        <input id="signinEmail" type="email" required>
+                        <label for="signinEmail">Emailadress<span class="required">*</span></label>
+                        <input id="signinEmail" type="email" required>                   
 
                         <label for="signinPassword">Password<span class="required">*</span></label>
                         <input id="signinPassword" type="password" required>
                     </div>
+                    <button class="btn-theme" >LOG IN</button>
                 </form>
                 
-                <button class="btn-theme">LOG IN</button>
+                
                 <div class="additional-options">
                     <div class="remember-me">
                         <input type="checkbox" id="remember" name="remember" value="remember">
@@ -210,15 +214,16 @@
                         <label for="signup_lastName">Lastname<span class="required">*</span></label>
                         <input id="signup_lastName" type="text" required>
 
-                        <label for="signup_email">Email<span class="required">*</span></label>
+                        <label for="signup_email">Emailadress<span class="required">*</span></label>
                         <input id="signup_email" type="email" required>
 
                         <label for="signup_password">Password<span class="required">*</span></label>
                         <input id="signup_password" type="password" required>
                     </div>
+                    <p> Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
+                    <button class="btn-theme">REGISTER</button>
                 </form>
-                <p> Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
-                <button class="btn-theme">REGISTER</button>
+                
             </div>
         </div>
     </section>

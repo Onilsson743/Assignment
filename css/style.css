@@ -123,12 +123,13 @@ html, body {
     justify-content: space-between;
     margin-top: 1.7rem;
     margin-bottom: 1.7rem;
+    gap: 1rem;
 }
 
     .main-menu .container .serch-bar {
         position: relative;
         flex: 1;
-        margin-left: 3rem; 
+        width: 100%;
     }
         .main-menu .container .serch-bar input {
             width: 100%;
@@ -1003,16 +1004,10 @@ footer {
             font-size: 1.2rem;
             margin-left: 0.2rem;
         }
-            
-        .signin-register .container .window .input-field input {
-            border: none;
-            border-radius: 4px;
-            width: 100%;
-            padding: 0.6rem;
-        }
 
         .signin-register .container .window .btn-theme {
             transition: 0.2s ease-in-out;
+            width: 100%;
         }
             .signin-register .container .window .btn-theme:hover {
                 background-color: var(--color-theme-dark);
@@ -1069,8 +1064,14 @@ footer {
     .form-theme input[type = "password"]:focus {
         outline: 0;
         box-shadow: 0 0 3px 0 var(--color-theme-dark);
-
     }
+    .form-theme input[type = "text"]:invalid,
+    .form-theme input[type = "email"]:invalid,
+    .form-theme input[type = "password"]:invalid {
+        outline: 0;
+        box-shadow: 0 0 3px 0 red;
+    }
+    
     .signin-register .container .window .external-login-title {
         display: flex;
     }
