@@ -369,6 +369,7 @@ html, body {
         border-radius: var(--border-radius-small);
         overflow: hidden;
         position: relative;
+        min-height: 270px;
     }
         .container .card-box img {
             width: 100%;
@@ -655,8 +656,6 @@ footer {
         .categories .category-box {
             width: 48%;
         }
-        
-    
 }
 
 @media (min-width: 768px) {
