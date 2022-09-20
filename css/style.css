@@ -971,8 +971,151 @@ footer {
         }
 
 
-/* Login / Registration section */
+
+/* Signin / register windows */
 .signin-register .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+    .signin-register .container .window {
+        width: 100%;
+        background-color: var(--color-gray-3);
+        border-radius: var(--border-radius-medium);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+        .signin-register .container .window form {
+            display: flex;
+            flex-direction: column;
+        }
+            .signin-register .container .window form label {
+                font-size: 1.2rem;
+                margin-bottom: 0.6rem;
+            }
+                .signin-register .container .window form label span {
+                    color: var(--color-theme);
+                    margin-left: 5px;
+                }
+            .signin-register .container .window form input {
+                border-radius: 4px;
+                padding: 0.7rem;
+                border: none;
+                margin-bottom: 2rem;
+            }
+                .signin-register .container .window form input:focus {
+                    outline: 0;
+                    box-shadow: 0 0 3px 0 var(--color-theme-dark);
+                }
+                .signin-register .container .window form input:invalid {
+                    outline: 0;
+                    box-shadow: 0 0 3px 0 red;
+                }
+            .signin-register .container .window form .error-message {
+                display: none;
+            }
+                .signin-register .container .window form input:invalid + .error-message {
+                    color: red;
+                }
+        .signin-register .container .window a {
+            text-decoration: none;
+            transition: 0.2s ease-in-out;
+            color: var(--color-theme);
+        }
+            .signin-register .container .window a:hover {
+                scale: 1.03;
+                color: var(--color-theme-dark);
+            }
+
+        /* Signin window only*/
+        .signin-register .container .window .additional-options {
+            display: flex;
+            justify-content: space-between;
+        }
+            .signin-register .container .window .additional-options .remember-me {
+                display: flex;
+                gap: 0.5rem;
+            }
+                .signin-register .container .window .additional-options .remember-me input {
+                    scale: 1.15;
+                }
+        .signin-register .container .window .external-login-title {
+            display: flex;
+            justify-content: space-between;
+        }
+            .signin-register .container .window .external-login-title span {
+                width: 30%;
+                border-bottom: 1px solid var(--color-gray-0);
+                margin: auto;
+            }
+            .signin-register .container .window .external-login-title h5 {
+                margin: auto;
+            }
+
+        /* Facebook and google login buttons */
+        .signin-register .container .window .external-login {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .signin-register .container .window .external-login .facebook-button {
+            display: flex;
+            flex: 1;
+            background-color: #3B5998;     
+            justify-content: center;
+            position: relative;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            height: 42px;
+            transition: 0.2s ease-in-out;
+        }
+        .signin-register .container .window .external-login .google-button {
+            flex: 1;
+            display: flex;
+            background-color: #4285F4;
+            position: relative;
+            justify-content: center;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            transition: 0.2s ease-in-out;
+        }
+        .signin-register .container .window .external-login button:hover {
+            background-color: var(--color-theme-dark);
+            scale: 1.05;
+        }
+    
+        .signin-register .container .window .external-login p{
+            margin: 0;
+            align-self: center;
+        }
+        .signin-register .container .window .external-login .google-img {
+            width: 30px;
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+        .signin-register .container .window .external-login .facebook-img {
+            filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(281deg) brightness(108%) contrast(108%);
+            width: 27px;
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+            
+@media (min-width: 992px) {
+    .signin-register .container {
+        flex-direction: row;
+    }
+}
+
+/* Login / Registration section */
+/* .signin-register .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -992,7 +1135,7 @@ footer {
         width: 100%;
     }
         .signin-register .container .window .error-message {
-            visibility: hidden;
+           
         }
         
         .signin-register .container .window label span {
@@ -1032,8 +1175,8 @@ footer {
                 color: var(--color-theme-dark);
             }
         
-            
-
+             */
+/* 
 .signin-register .window a {
     color: var(--color-theme);
     text-decoration: none;
@@ -1066,12 +1209,13 @@ footer {
     .form-theme input[type = "password"]:invalid  {
         outline: 0;
         box-shadow: 0 0 3px 0 red;
+        
     }
     .form-theme input[type = "text"]:invalid + p,
     .form-theme input[type = "email"]:invalid + p,
     .form-theme input[type = "password"]:invalid + p {
         color: red;
-        visibility: visible;
+        display: block;
     }
     
     .signin-register .container .window .external-login-title {
@@ -1143,4 +1287,36 @@ footer {
         .signin-register .container .window .external-login-title span {
             width: 30%;
         }
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Needs fixing!!
+Link is not scaling at hover on register window
+Error links not displayed when "form input" is invalid
+
+*/
