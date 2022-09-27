@@ -51,7 +51,13 @@ html, body {
 }
     .btn-theme:hover {
         scale: 1.1;
+        background-color: var(--color-theme-dark);
     }
+
+input:focus {
+    outline: 0;
+    box-shadow: 0 0 3px 0 var(--color-theme-dark);
+}
 
 /* Top menu */
 .top-menu{
@@ -137,10 +143,7 @@ html, body {
             padding: 10px;
             border: 1px solid var(--color-gray-2);
         }
-            .main-menu .container .serch-bar input:focus {
-                outline: 0;
-                box-shadow: 0 0 3px 0 var(--color-theme-dark);
-            }
+    
         .main-menu .container .serch-bar .serch-button {
             position: absolute;
             background-color: var(--color-theme);
@@ -149,7 +152,17 @@ html, body {
             padding: 10px 20px 12px 15px;
             border-radius: 0 30px 30px 0;
             border: none;
+            transition: 0.3s ease-in-out;
         }
+            .main-menu .container .serch-bar .serch-button:hover {
+                background-color: var(--color-theme-dark);
+            }
+            .main-menu .container .serch-bar .serch-button i{
+                transition: 0.3s ease-in-out;
+            }
+                .main-menu .container .serch-bar .serch-button:hover i{
+                    scale: 1.5;
+                }
     .main-menu .container .menu-links #cart {
         position: relative;
     }
@@ -186,6 +199,7 @@ html, body {
         color: var(--color-white);
         border: none;
         padding: 0.7rem 0.8rem;
+        transition: 0.3s ease-in-out;
     }
         .main-menu-bottom .browse-catagories button i:nth-child(2){
             margin-left: 1.5rem;
@@ -193,8 +207,17 @@ html, body {
 
         .main-menu-bottom .browse-catagories button:hover {
             background-color: var(--color-theme-dark);
-            transition: 0.3s;
         }
+        .main-menu-bottom .browse-catagories .catagories {
+            display: flex;
+            flex-direction: column;
+            background-color: #0E153D;
+            display: none;
+        }
+        .main-menu-bottom .browse-catagories button:hover .catagories{
+            display: block;
+        }
+
 
     /* Right side */
     .main-menu-bottom .special-offer {
@@ -369,7 +392,6 @@ html, body {
         border-radius: var(--border-radius-small);
         overflow: hidden;
         position: relative;
-        min-height: 270px;
     }
         .container .card-box img {
             width: 100%;
@@ -391,7 +413,7 @@ html, body {
             top: 100%;
             right: 5%;
             padding: 0.8rem;
-            z-index: 2;
+            z-index: 3;
             list-style: none;
             font-size: 1.4rem;
             transition: 0.3s ease-in-out;
@@ -537,7 +559,12 @@ html, body {
         .flash-sale .container .right-side .btn-theme {
             width: 200px;
             margin-bottom: 2rem;
+            box-shadow: 0 5px 5px black;
         }
+            .flash-sale .container .right-side .btn-theme:hover {
+                background-color: var(--color-theme);
+                box-shadow: 0 5px 10px black;
+            }
         .flash-sale .container .right-side .timer-box {
             display: flex;
             flex-wrap: wrap;
@@ -825,7 +852,6 @@ footer {
             justify-content: center;
             gap: 2rem;
         }
-
 }
 
 @media (min-width: 1200px) {
@@ -1123,3 +1149,91 @@ Link is not scaling at hover on register window
 Error links not displayed when "form input" is invalid
 
 */
+
+
+
+
+
+
+
+
+
+
+.main-menu-bottom .container .browse-catagories .dropdown {
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+}
+.main-menu-bottom .container .browse-catagories .dropdown * {
+    box-sizing: border-box;
+}
+.main-menu-bottom .container .browse-catagories .dropdown .select {
+    background-color: var(--color-theme);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* javascript */
+.select-clicked {
+    border: 1px solid green;
+    box-shadow: 0 0 0.8em black;
+}
+
+.main-menu-bottom .container .browse-catagories .dropdown .select:hover {
+    background-color: var(--color-theme-dark);
+}
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid white;
+    transition: 0.3s ease-in-out;
+}
+    .caret-rotate {
+        transform: rotate(180deg);
+    }
+.menu {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background-color: var(--color-theme);
+    border: 1px solid black;
+    box-shadow: 0 0.5em 1em black;
+    border-radius: 0.5em;
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    z-index: 1;
+    transition: 0.2s ease-in;
+}
+.main-menu-bottom .container .browse-catagories .dropdown .menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.main-menu-bottom .container .browse-catagories .dropdown .menu li:hover{
+    background-color: var(--color-theme-dark);
+}
+
+.active {
+    background: #23242a;
+}
+
+.menu-open {
+    display: block;
+    opacity: 1;
+}
