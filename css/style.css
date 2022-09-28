@@ -77,6 +77,7 @@ input:focus {
     }
 
     /* Left side */
+    
     .top-menu .dropdown-theme button{
         background-color: var(--color-theme);
         color: var(--color-white);
@@ -84,14 +85,17 @@ input:focus {
     }
         .top-menu .dropdown-theme button:hover {
         color: var(--color-theme-dark);
-        border: none;
         }
-    .top-menu .dropdown-menu {
+    .top-menu .container .dropdown .dropdown-menu {
         background-color: var(--color-theme);
-    }
-    .top-menu .dropdown-window {
         border: none;
+        border-radius: 0px 0px 5px 5px;
+        box-shadow: 0 10px 6px black; 
     }
+        .top-menu .dropdown-menu .dropdown-item:hover {
+            background-color: var(--color-theme-dark);
+            color: white;
+        }
 
 
     /* Right side */
@@ -194,30 +198,29 @@ input:focus {
     }
     
     /* Left side */
-    .main-menu-bottom .browse-catagories button {
+    .main-menu-bottom .browse-catagories .dropdown button {
         background-color: var(--color-theme);
         color: var(--color-white);
         border: none;
         padding: 0.7rem 0.8rem;
         transition: 0.3s ease-in-out;
     }
-        .main-menu-bottom .browse-catagories button i:nth-child(2){
+        .main-menu-bottom .browse-catagories .dropdown button i:nth-child(2){
             margin-left: 1.5rem;
         }
 
-        .main-menu-bottom .browse-catagories button:hover {
+        .main-menu-bottom .browse-catagories .dropdown button:hover {
             background-color: var(--color-theme-dark);
         }
-        .main-menu-bottom .browse-catagories .catagories {
-            display: flex;
-            flex-direction: column;
-            background-color: #0E153D;
-            display: none;
+        .main-menu-bottom .browse-catagories .dropdown .dropdown-menu {
+            background-color: var(--color-theme); 
         }
-        .main-menu-bottom .browse-catagories button:hover .catagories{
-            display: block;
-        }
-
+            .main-menu-bottom .browse-catagories .dropdown .dropdown-menu .dropdown-item {
+                color: white;
+            }
+                .main-menu-bottom .browse-catagories .dropdown .dropdown-menu .dropdown-item:hover {
+                    background-color: var(--color-theme-dark);
+                }
 
     /* Right side */
     .main-menu-bottom .special-offer {
@@ -418,6 +421,32 @@ input:focus {
             font-size: 1.4rem;
             transition: 0.3s ease-in-out;
         }
+            .container .card-box .card-menu li {
+                position: relative;
+            }
+                .container .card-box .card-menu li .menu-info {
+                    position: absolute;
+                    background-color: var(--color-theme);
+                    color: white;
+                    top: -10px;
+                    right: 55px;
+                    border-radius: 10px;
+                    padding: 0.3rem 0.5rem;
+                    display: none;
+                }
+                    .container .card-box .card-menu li .menu-info::before {
+                        content: '';
+                        position: absolute;
+                        border-right: 30px solid transparent;
+                        border-top: 30px solid var(--color-theme);
+                        right: -10px;
+                        top: 15px;
+                        transform: rotate(23deg);
+                        z-index: -1;  
+                    }
+                .container .card-box .card-menu li i:hover + .menu-info {
+                    display: block;
+                }
             .container .card-box .card-menu .fa-circle {
                 color: var(--color-product-instock);
             }
@@ -1144,96 +1173,22 @@ footer {
 }
 
 
+
+.width-100 {
+    width: 100px;
+}
+.width-130 {
+    width: 130px;
+}
+
+.width-180 {
+    width: 180px;
+}
+
+
+
 /* Needs fixing!!
 Link is not scaling at hover on register window
 Error links not displayed when "form input" is invalid
 
 */
-
-
-
-
-
-
-
-
-
-
-.main-menu-bottom .container .browse-catagories .dropdown {
-    min-width: 15em;
-    position: relative;
-    margin: 2em;
-}
-.main-menu-bottom .container .browse-catagories .dropdown * {
-    box-sizing: border-box;
-}
-.main-menu-bottom .container .browse-catagories .dropdown .select {
-    background-color: var(--color-theme);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-    padding: 1em;
-    border-radius: 0.5em;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-/* javascript */
-.select-clicked {
-    border: 1px solid green;
-    box-shadow: 0 0 0.8em black;
-}
-
-.main-menu-bottom .container .browse-catagories .dropdown .select:hover {
-    background-color: var(--color-theme-dark);
-}
-.caret {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid white;
-    transition: 0.3s ease-in-out;
-}
-    .caret-rotate {
-        transform: rotate(180deg);
-    }
-.menu {
-    list-style: none;
-    padding: 0.2em 0.5em;
-    background-color: var(--color-theme);
-    border: 1px solid black;
-    box-shadow: 0 0.5em 1em black;
-    border-radius: 0.5em;
-    color: white;
-    position: absolute;
-    width: 100%;
-    top: 3em;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    display: none;
-    z-index: 1;
-    transition: 0.2s ease-in;
-}
-.main-menu-bottom .container .browse-catagories .dropdown .menu li {
-    padding: 0.7em 0.5em;
-    margin: 0.3em 0;
-    border-radius: 0.5em;
-    cursor: pointer;
-}
-
-.main-menu-bottom .container .browse-catagories .dropdown .menu li:hover{
-    background-color: var(--color-theme-dark);
-}
-
-.active {
-    background: #23242a;
-}
-
-.menu-open {
-    display: block;
-    opacity: 1;
-}
