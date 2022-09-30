@@ -470,7 +470,11 @@ input:focus {
                 color: var(--color-white);
                 border: 1px solid white;
                 margin: 0.5rem 0;
+                transition: 0.2s ease-in-out;
             }
+                .container .card-box .card-info button:hover {
+                    background-color: #20D3C2;
+                }
             .container .card-box .card-info p {
                 text-decoration: line-through;
             }
@@ -484,7 +488,6 @@ input:focus {
                 .box i{
                     font-size: 40px;
                     color: white;
-                    transition: 0.3s ease-in-out;
                 }
                     .star-box i:hover {
                         color: var(--color-theme);                        
